@@ -1,0 +1,26 @@
+generated: '2026-08-22'
+method: searched
+source: https://docs.hypori.com/Configure/managementAPI
+docs: https://docs.hypori.com/Configure/managementAPI
+api: Hypori Management API
+limit_count: 0
+rate_limits: []
+headers: []
+status_on_exhaustion: null
+retry_after: null
+note: >-
+  Hypori documents no rate limits for the Management API. The Management API page describes
+  authentication and the resource-oriented REST style and states only that the API "uses
+  standard HTTP response codes and verbs" — it names no per-key, per-account or per-endpoint
+  quota, no window, no burst allowance, no X-RateLimit-*/RateLimit-* response headers, no
+  Retry-After behavior and no 429 semantics. The full documentation set (docs.hypori.com
+  sitemap: 17 pages, all fetched 2026-08-22) contains no rate-limit reference page. The API is
+  served from each customer's own management cluster and is not publicly reachable, so no live
+  response could be observed to read headers off. Recorded as an honest measured zero.
+searched:
+- url: https://docs.hypori.com/Configure/managementAPI
+  status: 200
+  result: no rate-limit content
+- url: https://docs.hypori.com/sitemap.xml
+  status: 200
+  result: 17 documentation URLs, none rate-limit related

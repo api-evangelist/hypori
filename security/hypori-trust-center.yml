@@ -1,0 +1,43 @@
+generated: '2026-08-22'
+method: searched
+source: https://docs.hypori.com/Discover/trust
+url: https://app.vanta.com/hypori.com/trust/gmcybh48syrmfwdhr8dd52
+platform: Vanta Trust Center
+probe:
+  url: https://app.vanta.com/hypori.com/trust/gmcybh48syrmfwdhr8dd52
+  status: 200
+  content_type: text/html
+  observed: '2026-08-22'
+  machine_readable: false
+  note: >-
+    The Vanta trust page returns 200 but is a client-rendered single-page app — the served HTML
+    is a shell with no certification content in it, so the certification list below was read from
+    Hypori's own documentation and website rather than scraped from the trust page.
+published: true
+linked_from:
+- https://docs.hypori.com/Discover/trust
+- https://docs.hypori.com/ (footer, "Trust Center")
+- https://www.hypori.com/ (Company nav, "Trust Center — Certifications and compliance")
+describes: >-
+  Hypori's own description: "The Hypori Trust Center provides a collection of resources on
+  cybersecurity and compliance information, including a list of all Cybersecurity Compliance
+  Framework Certifications achieved by Hypori. It features white papers covering security and
+  compliance topics and maintains a complete list of sub processors."
+contents_claimed:
+- certification list
+- security and compliance white papers
+- sub-processor list
+certifications:
+- FedRAMP High
+- DoD / DoW Impact Level 5 (IL5) Provisional Authorization
+- SOC 2 Type II
+- NIAP Common Criteria
+- NSA Commercial Solutions for Classified (CSfC)
+- FIPS 140-2 validated cryptographic module (Hypori Cryptographic Module for BoringSSL)
+detail: conformance/hypori-conformance.yml
+subprocessors:
+  published: claimed on the trust center; also addressed in the Data Processing Addendum
+  dpa: https://www.hypori.com/legal/data-processing-addendum-dpa
+gaps:
+- Trust center content is not readable without executing JavaScript.
+- No first-party trust.hypori.com host (NXDOMAIN); the trust center is hosted on app.vanta.com.

@@ -1,0 +1,120 @@
+generated: '2026-08-22'
+method: searched
+source: https://docs.hypori.com/releasenotes
+docs: https://docs.hypori.com/releasenotes
+subject: Hypori Platform (Hypori Cloud on AWS, including customer-managed accounts)
+note: >-
+  Hypori maintains a public, dated release-notes index on its documentation host. Each entry
+  links to a PDF; there is no HTML changelog, no RSS/Atom feed and no machine-readable release
+  feed, so the entries below were read from the index page and, for the three most recent
+  releases, from the PDFs themselves. The Management API has no separate changelog — API
+  changes are not called out from platform releases, and no breaking-change notices are
+  published.
+format: pdf-per-release
+feed: null
+scheme:
+  style: calendar-major-minor
+  major: >-
+    Major releases occur approximately quarterly and are numbered by year and sequence
+    (e.g. 2024.3).
+  minor: >-
+    Minor releases carry the major release number plus an incremental series number
+    (e.g. 2024.3.1) and are issued monthly between major releases for security updates and
+    key product bug fixes.
+  support_window: >-
+    Minor releases are typically supported for the current and one previous major version
+    (e.g. 2024.3 and 2024.2).
+  feature_policy: >-
+    New features are reserved for major releases, to reduce the risk of introducing changes
+    during minor updates.
+  client_apps: >-
+    Hypori Client updates are published in the What's New sections of the Google Play Store
+    and Apple App Store, not in the platform release notes.
+current_version: '2026.2.1'
+current_version_date: '2026-07-15'
+entry_count: 15
+entries:
+- version: '2026.2.1'
+  date: '2026-07-15'
+  index_date_label: July 15th, 2026
+  pdf_date_label: July 16th, 2026
+  type: minor
+  breaking: false
+  url: https://docs.hypori.com/assets/files/hypori-release-notes-2026-2-1-d553820ae04d2a07d2516e6d96bf683c.pdf
+  highlights:
+  - Enrollment Portal — Purebred derived-credential users go straight to the OTP page; admins can disable self-service pages during scheduled maintenance.
+  - Console 2.0 — Group Managers can see virtual-device transitional states; data-grid columns resize; full-row click selection.
+  - App Gallery — fixed a self-update infinite loop; apps are streamed during install instead of staged on the virtual-device disk.
+  - Hypori Assist — diagnostic files can be marked Done with a 7-day expiry and countdown column; PKI credential health status and credential diagnostic downloads for IL5 users.
+  - Enhanced offline notifications can be overridden at the child-group level.
+  note: >-
+    The release-notes index dates this release July 15th, 2026; the PDF cover dates it
+    July 16th, 2026. Both values are recorded verbatim rather than reconciled.
+- version: '2026.2.0'
+  date: '2026-06-18'
+  type: major
+  breaking: false
+  url: https://docs.hypori.com/assets/files/hypori-release-notes-2026-2-537e8363e3a820eb7351fe6ca6753bee.pdf
+  highlights:
+  - Enhanced offline notifications — offline virtual devices surface sender, subject and message content (starting with Microsoft Outlook); optional, disabled by default, cluster or per-customer scoped, honoring existing content-sanitization policies.
+  - Enrollment Portal — self-registration of a new CAC via guided Purebred steps; Okta Login and Okta Verify setup combined into one page; Personnel Type Code (PTC) allowlisting as an alternative to email allowlisting.
+- version: '2026.1.1'
+  date: '2026-04-27'
+  type: minor
+  breaking: false
+  url: https://docs.hypori.com/assets/files/hypori-release-notes-2026-1-1-9ddb0a97e4bf8c2fe69d6b0fa6b87f75.pdf
+  highlights:
+  - Enrollment Portal now supports Hypori biometric authentication as an additional MFA option alongside Okta Verify and TOTP.
+  - Enrollment activity tracked with event source, actor identity and role, for audit and compliance.
+  - Console — reliable OTP email for external-LDAP-onboarded users; storage-volume extension for an existing virtual device; correct template sort by version; reliable JSON/XML editing in Console input fields.
+- version: '2026.1.0'
+  date: '2026-03-25'
+  type: major
+  url: https://docs.hypori.com/assets/files/hypori-release-notes-2026-1-bef8c11c056566e6034fee63e6b3aac6.pdf
+- version: '2025.4.1'
+  date: '2026-01-27'
+  type: minor
+  url: https://docs.hypori.com/assets/files/hypori-release-notes-2025-4-1-e5865be0288548fb22d756a5add84f71.pdf
+- version: '2025.4.0'
+  date: '2025-12-03'
+  type: major
+  url: https://docs.hypori.com/assets/files/hypori-release-notes-2025-4-528e720e850ef2a366f5c9197b76a601.pdf
+- version: '2025.3.2'
+  date: '2025-10-29'
+  type: minor
+  url: https://docs.hypori.com/assets/files/hypori-release-notes-2025-3-2-5ef2ee4974d66d15c54f00d86096fff7.pdf
+- version: '2025.3.1'
+  date: '2025-10-07'
+  type: minor
+  url: https://docs.hypori.com/assets/files/hypori-release-notes-2025-3-1-7d744e92f4dc8b90949b93c4ee421977.pdf
+- version: '2025.3.0'
+  date: '2025-09-03'
+  type: major
+  url: https://docs.hypori.com/assets/files/hypori-release-notes-2025-3-6645360693c5bd631d85c59d1e0cc9a8.pdf
+- version: '2025.2.1'
+  date: '2025-07-24'
+  type: minor
+  url: https://docs.hypori.com/assets/files/hypori-release-notes-2025-2-1-e2502ebf2d8d7b507b872e6eb8fc9e6a.pdf
+- version: '2025.2'
+  date: '2025-06-10'
+  type: major
+  url: https://docs.hypori.com/assets/files/hypori-release-notes-2025-2-ccec010deabbb73e46028da8d021aa00.pdf
+- version: '2025.1'
+  date: '2025-04-16'
+  type: major
+  url: https://docs.hypori.com/assets/files/hypori-release-notes-2025-1-517ead0a1a735812ec1359720b80961f.pdf
+- version: '2024.3.2'
+  date: '2025-02-26'
+  type: minor
+  url: https://docs.hypori.com/assets/files/hypori-release-notes-2024-3-2-e415066ef689a7cf647359e28e708848.pdf
+- version: '2024.3.1'
+  date: '2025-01-27'
+  type: minor
+  url: https://docs.hypori.com/assets/files/hypori-release-notes-2024-3-1-6725e17d9ca510418e8906af373824a1.pdf
+- version: '2024.3.0'
+  date: '2024-11-18'
+  type: major
+  url: https://docs.hypori.com/assets/files/hypori-release-notes-2024-3-cac98dd8bc80a52b4f609584edd0a794.pdf
+gaps:
+- Release notes are PDF-only; there is no HTML changelog and no feed a machine can subscribe to.
+- No API-level changelog and no breaking-change or deprecation notices for /api/v1 vs /api/v2.

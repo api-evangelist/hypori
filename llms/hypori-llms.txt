@@ -1,0 +1,54 @@
+# Hypori
+
+> Hypori empowers secure virtual access to enterprise apps and data from any mobile device with total personal privacy. Hypori is a Virginia-based technology company providing Virtual Mobile Infrastructure (VMI) and zero-trust mobile access. Stream pixels, not data. Tagline: One Device, Zero Worries®.
+
+## Products
+
+- [Hypori Mobile](https://www.hypori.com/hyporimobile) - Secure virtual workspace for BYOD and zero-trust access; the physical device streams encrypted pixels only, with no organizational data stored on the endpoint.
+- [Hypori Lyte](https://www.hypori.com/lyte) - Lightweight VMI with three variants: Lyte for Secure Messaging, Lyte for Apps, and Lyte for Enterprise Browser—single-purpose delivery without a full workspace.
+- [Hypori Secure Messaging](https://www.hypori.com/securemessaging) - Private, compliant mobile messaging; messages and attachments stay inside a controlled virtual environment, never on the personal device.
+
+## Solutions
+
+- [Secure BYOD](https://www.hypori.com/secure-byod) - Worry-free BYOD with total personal privacy; no intrusive MDM or MAM software, and no risk of personal device wipe or confiscation.
+- [Secure Work](https://www.hypori.com/securework) - Secure remote work via pixel streaming; Hypori never processes, stores, or transmits data on the personal device.
+- [Secure Mobile Access](https://www.hypori.com/secure-mobile-access) - Secure, zero-trust mobile access for enterprise and regulated workforces.
+- [CMMC Compliance](https://www.hypori.com/cmmc) - Keep mobile endpoints out of CMMC Level 2 assessment scope when CUI and FCI never reach the device.
+- [Pricing](https://www.hypori.com/pricing) - Customized, scalable pricing for secure, worry-free BYOD—from small teams to large enterprise deployments.
+
+## Industries
+
+- [Government & Defense](https://www.hypori.com/industry/government) - Secure mobile access for defense programs including Army BYOD and DAF Workspace Anywhere; supports zero-trust access to NIPRNet, CAC-enabled websites, DoW IL5, and classified access via NSA CSfC from a government device.
+- [Defense Industrial Base (DIB)](https://www.hypori.com/industry/dib) - Secure virtual access to CUI and FCI that is never transmitted to, stored, or processed on the device; reducing attack surface and compliance scope under CMMC 2.0 Level 2 and DFARS 252.204-7012 for remote and BYOD users.
+- [Financial Services](https://www.hypori.com/industry/financial-services-secure-acces) - Zero data on device; an alternative to COPE with MDM or BYOD with MAM where sensitive data still touches the endpoint.
+- [Healthcare BYOD](https://www.hypori.com/hipaa-compliant-byod-healthcare) - HIPAA-compliant BYOD enabling healthcare professionals to securely access ePHI and enterprise apps on personal devices, with no data stored on the physical device.
+
+## Company
+
+- [About Hypori](https://www.hypori.com/company) - Company vision, values, history, and milestones including FedRAMP High authorization and DoW IL5 Provisional Authorization.
+- [Leadership & Board](https://www.hypori.com/leadership-and-board) - Executive team led by CEO Jared N. Shepard, plus board members and executive advisors.
+- [Partners](https://www.hypori.com/partners) - Partner program for referral, technology, system integrator, reseller, and MSP partners; available via AWS Marketplace and Carahsoft.
+
+## Resources
+
+- [Resource Hub](https://www.hypori.com/resource-hub) - Hypori demos, datasheets, case studies, white papers, and support packages.
+- [FAQ](https://www.hypori.com/resources/faq) - Answers on how Hypori works, device support, licensing, privacy, and how Hypori differs from MDM and MAM.
+- [DoD FAQs](https://www.hypori.com/resources/dod-faqs) - FAQs for Army BYOD and Department of Air Force (DAF) Workspace Anywhere programs.
+- [Learning Center](https://www.hypori.com/resources/learning-center) - Short tutorials and step-by-step guides for personalizing, navigating, and troubleshooting your Hypori virtual device.
+
+## Compliance & Security
+
+Hypori is built on a zero-trust architecture trusted by defense, government, healthcare, and other regulated industries. Certifications and authorizations cited on the website include FedRAMP High, DoW Impact Level 5 (IL5), NIAP Common Criteria, NSA Commercial Solutions for Classified (CSfC), and SOC 2 Type II. Hypori keeps CUI, FCI, PII, and PHI off the endpoint entirely — no data ever touches the device. That reduces both attack surface and compliance scope under CMMC 2.0 Level 2, DFARS 252.204-7012, HIPAA, and NIST 800-171 for remote and BYOD users, and satisfies the No TikTok on Government Devices Act by design.
+
+## Legal
+
+- [Legal Hub](https://www.hypori.com/legal) - Privacy policies, terms of service, end-user license agreement, acceptable use policy, and corporate privacy statements.
+
+## Contact
+
+- [Request a Demo](https://www.hypori.com/request-a-demo) - Request a demo of Hypori products.
+- [Contact Sales](https://www.hypori.com/contact) - Contact the Hypori sales team.
+- [Become a Partner](https://www.hypori.com/partners) - Join the Hypori partner network.
+- Email: privacy@hypori.com
+- Email: contracts-legal@hypori.com
+- Address: Hypori, Inc., 1801 Robert Fulton Drive, Suite 340, Reston, VA 20191

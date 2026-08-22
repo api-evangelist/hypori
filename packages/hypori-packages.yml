@@ -1,0 +1,72 @@
+generated: '2026-08-22'
+method: searched
+source: >-
+  Registry searches of npm, PyPI, RubyGems, crates.io, NuGet and pkg.go.dev for "hypori"
+  plus the Hypori documentation and download surfaces, 2026-08-22.
+note: >-
+  Hypori ships NO client SDK in any public package registry. npm search "hypori" returned 0
+  results; pypi.org/pypi/hypori/json 404; rubygems.org/api/v1/gems/hypori.json 404;
+  crates.io returned 0 crates; the NuGet query returned no Hypori-authored package. There is
+  no Hypori GitHub organization (api.github.com/orgs/hypori 404; github.com/hypori is an
+  unrelated personal account holding a Udemy Python course fork and a hello-world repo, last
+  pushed 2018). No SDKs pointer is emitted in apis.yml because there is no SDK.
+  What Hypori does distribute publicly are the end-user client applications, recorded below
+  as distributions rather than SDKs — they are the product, not a library a developer
+  integrates against.
+sdk_count: 0
+packages: []
+distributions:
+- kind: mobile-app
+  platform: ios
+  registry: app-store
+  name: Hypori
+  bundle_id: com.hypori.halo.client
+  publisher: Hypori Inc
+  url: https://apps.apple.com/us/app/hypori/id6504121600
+  version: 4.3.81
+  published: '2026-08-11'
+  official: true
+  version_source: https://itunes.apple.com/lookup?id=6504121600
+- kind: mobile-app
+  platform: android
+  registry: google-play
+  name: Hypori
+  package_id: com.intelligentwaves.client
+  url: https://play.google.com/store/apps/details?id=com.intelligentwaves.client
+  version: 4.3.31
+  published: '2026-08-10'
+  official: true
+  version_source: https://play.google.com/store/apps/details?id=com.intelligentwaves.client
+  note: >-
+    The Play Store package id is still com.intelligentwaves.client — Intelligent Waves is the
+    company Hypori was spun out of — while the iOS bundle id has moved to com.hypori.halo.client.
+- kind: marketplace-listing
+  platform: aws
+  registry: aws-marketplace
+  name: Hypori Platform for AWS GovCloud
+  url: https://aws.amazon.com/marketplace/pp/prodview-jzmb6jxix7cfu
+  version: null
+  published: null
+  official: true
+  note: >-
+    Procurement listing, not a package registry — AWS Marketplace exposes no version metadata
+    endpoint for this product, so version and published are recorded null rather than guessed.
+registries_checked:
+- registry: npm
+  query: https://registry.npmjs.org/-/v1/search?text=hypori
+  result: 0 results
+- registry: pypi
+  query: https://pypi.org/pypi/hypori/json
+  result: 404
+- registry: rubygems
+  query: https://rubygems.org/api/v1/gems/hypori.json
+  result: 404
+- registry: crates.io
+  query: https://crates.io/api/v1/crates?q=hypori
+  result: 0 crates
+- registry: nuget
+  query: https://azuresearch-usnc.nuget.org/query?q=hypori
+  result: no Hypori-authored package
+- registry: github
+  query: https://api.github.com/orgs/hypori
+  result: 404 (no organization)

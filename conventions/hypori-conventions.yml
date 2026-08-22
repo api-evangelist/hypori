@@ -1,0 +1,95 @@
+generated: '2026-08-22'
+method: searched
+source: https://docs.hypori.com/Configure/managementAPI
+docs:
+- https://docs.hypori.com/Configure/managementAPI
+- https://docs.hypori.com/Configure/serviceModel
+- https://docs.hypori.com/releasenotes
+api: Hypori Management API
+note: >-
+  Every statement below is taken from Hypori's own documentation. Hypori publishes no OpenAPI,
+  so nothing here is derived from a specification and the gaps are genuine documentation gaps,
+  not parsing failures.
+style:
+  architecture: REST
+  resource_orientation: >-
+    "predictable resource-oriented URLs" (docs.hypori.com/Configure/managementAPI)
+  request_encoding: JSON
+  response_encoding: JSON
+  verbs: standard HTTP verbs
+  status_codes: standard HTTP response codes
+authentication:
+  style: mTLS client certificate + X-AUTH-TOKEN header
+  artifact: authentication/hypori-authentication.yml
+versioning:
+  style: uri-path
+  versions_observed:
+  - /api/v1/
+  - /api/v2/
+  example_paths:
+  - POST /api/v2/authenticate/adminuilogin
+  - POST /api/v1/cloudconfigs
+  documented_policy: >-
+    No API version deprecation policy is published. The platform release scheme (major
+    YYYY.N quarterly, minor YYYY.N.M monthly, minor releases supported for the current and
+    one previous major version) is documented at docs.hypori.com/releasenotes and is captured
+    in lifecycle/hypori-lifecycle.yml, but it governs the platform build, not the API version.
+idempotency:
+  supported: not documented
+  header: null
+  note: >-
+    Hypori documents no idempotency key, no safe-retry guidance and no retry semantics for the
+    Management API. No Idempotency pointer is emitted in apis.yml.
+pagination:
+  style: not documented
+  params: []
+  response_fields: []
+field_expansion:
+  supported: not documented
+metadata:
+  supported: not documented
+request_id_tracing:
+  header: not documented
+  note: >-
+    Platform-side telemetry is documented (microservices emit JSON logs to stdout, collected
+    by agents and forwarded to Splunk; infrastructure logs go to CloudWatch, Kinesis, Firehose
+    and S3 under AWS Landing Zone Accelerator — docs.hypori.com/Plan/integration and
+    docs.hypori.com/Configure/logging), but no client-visible correlation/request-id header is
+    published for API consumers.
+error_envelope:
+  format: not documented
+  problem_json: false
+  note: >-
+    Documentation states only that the API "uses standard HTTP response codes". No error code
+    registry, no error body schema and no problem+json usage is published, so no errors/
+    artifact is emitted.
+rate_limit_signaling:
+  headers: not documented
+  status_on_exhaustion: not documented
+  artifact: rate-limits/hypori-rate-limits.yml
+reversibility:
+  state: undocumented
+  grade: none
+  write_surface: true
+  note: >-
+    The Management API is explicitly a write surface — it manages user accounts, virtual device
+    lifecycles, client and virtual-device policy assignments, and virtual-device template
+    assignments. Hypori documents no reversal operation (no cancel/undo/restore/rollback) and
+    no window for any of them. The Quick Start describes an Admin/User Administration portal
+    whose actions include "Add/Delete individual users", "Add/Delete bulk groups of users" and
+    "Re-issue a user QR code" — the QR code re-issue is the only recovery-shaped action named,
+    and its only stated window is that an issued QR code is valid for 7 days. That is a
+    credential-validity window, not a reversal window, so it is recorded here and NOT graded as
+    reversibility.
+  operations: []
+  windows:
+  - subject: user onboarding QR code
+    window: valid for 7 days from issue
+    source: https://docs.hypori.com/Configure/quickstart
+    is_reversal_window: false
+dry_run_mode:
+  supported: not documented
+gaps:
+- No OpenAPI or other machine-readable contract.
+- No public endpoint reference beyond two named paths.
+- No idempotency, pagination, error-envelope, rate-limit or reversibility documentation.

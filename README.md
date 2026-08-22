@@ -64,5 +64,36 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Hypori is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://www.nasdaqprivatemarket.com/
+Hypori, Inc. is a Reston, Virginia headquartered, service-disabled veteran-owned software company
+building Virtual Mobile Infrastructure (VMI) for zero-trust mobile access. Hypori Mobile, Hypori
+Lyte and Hypori Secure Messaging run a fully isolated virtual Android workspace in Hypori's cloud
+and stream only encrypted pixels to the user's phone or tablet, so no organizational data is
+processed, transmitted or stored on the endpoint. Hypori holds FedRAMP High authorization, a
+DoD/DoW Impact Level 5 provisional authorization, SOC 2 Type II, NIAP Common Criteria validation
+and an NSA CSfC listing, and runs the U.S. Army BYOD and Department of the Air Force Workspace
+Anywhere programs.
+
+## API surface
+
+Hypori documents a REST **Management API** for user accounts, virtual device lifecycles, and
+client / virtual-device policy and template assignments. It is authenticated with an
+administrator `.p12` client certificate exchanged at `POST /api/v2/authenticate/adminuilogin`
+for a token carried in an `X-AUTH-TOKEN` header, and is served from each customer's own
+management cluster host rather than a shared public endpoint.
+
+**Hypori publishes no machine-readable contract.** `/openapi.json`, `/openapi.yaml`,
+`/swagger.json` and `/api-docs` all return 404 on `hypori.com`, `www.hypori.com` and
+`docs.hypori.com`; there is no GraphQL, MCP, A2A agent card, AsyncAPI, gRPC or WSDL surface, and
+no `/.well-known/` document on any host. The public API documentation names exactly two endpoint
+paths.
+
+## Links
+
+- Website — https://www.hypori.com/
+- Documentation — https://docs.hypori.com/
+- Management API — https://docs.hypori.com/Configure/managementAPI
+- Quick Start — https://docs.hypori.com/Configure/quickstart
+- Release notes — https://docs.hypori.com/releasenotes
+- Trust Center — https://app.vanta.com/hypori.com/trust/gmcybh48syrmfwdhr8dd52
+- Pricing — https://www.hypori.com/pricing
+- Support — https://www.hypori.com/support

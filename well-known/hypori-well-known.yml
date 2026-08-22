@@ -1,0 +1,92 @@
+generated: '2026-08-22'
+method: probed
+source: >-
+  Direct HTTPS probes of every Hypori host named in apis.yml (hypori.com, www.hypori.com)
+  and the documentation host (docs.hypori.com), 2026-08-22.
+note: >-
+  No /.well-known/ document is served on any Hypori host. Every path returned a real 404 —
+  a control probe of /.well-known/zzz-control-probe also returned 404 on both www.hypori.com
+  (88 bytes) and docs.hypori.com (26,902 bytes, the Docusaurus 404 page), so these hosts are
+  NOT soft-200 catch-alls and the negatives are trustworthy. hit_count is 0, so no WellKnown
+  or SecurityTxt pointer is emitted in apis.yml. Hypori's Management API is served from each
+  customer's own management cluster host, which is not publicly resolvable, so no
+  /.well-known/ surface could be probed on the API host itself.
+hit_count: 0
+hosts:
+- host: https://www.hypori.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+  soft_404_control:
+    path: /.well-known/zzz-control-probe
+    status: 404
+    bytes: 88
+- host: https://hypori.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+- host: https://docs.hypori.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+  soft_404_control:
+    path: /.well-known/zzz-control-probe
+    status: 404
+    bytes: 26902

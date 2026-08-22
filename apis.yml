@@ -1,23 +1,135 @@
 aid: hypori
 name: Hypori
-description: 'Hypori is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  Hypori, Inc. is a Reston, Virginia headquartered, service-disabled veteran-owned software
+  company that builds Virtual Mobile Infrastructure (VMI) for zero-trust mobile access. Its
+  products — Hypori Mobile, Hypori Lyte and Hypori Secure Messaging — run a fully isolated
+  virtual Android workspace in Hypori's cloud and stream only encrypted pixels to the user's
+  phone or tablet, so no organizational data is ever processed, transmitted or stored on the
+  endpoint. That architecture keeps CUI, FCI, PII and PHI off personal devices and takes the
+  mobile endpoint out of CMMC 2.0 Level 2 assessment scope. Hypori holds FedRAMP High
+  authorization, a DoD/DoW Impact Level 5 provisional authorization, SOC 2 Type II, NIAP
+  Common Criteria validation and NSA CSfC listing, and runs the U.S. Army BYOD and Department
+  of the Air Force Workspace Anywhere programs. Hypori publishes a REST Management API for
+  user, device-lifecycle and policy automation, documented in prose at docs.hypori.com; the
+  API is authenticated with administrator client certificates plus an X-AUTH-TOKEN header and
+  is served from each customer's own management cluster host.
+image: https://cdn.prod.website-files.com/670e85dd28def467590a59aa/672a83392147c46b65f05782_Open%20graph%20preview.png
 url: https://raw.githubusercontent.com/api-evangelist/hypori/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
 specificationVersion: '0.20'
 created: '2026-08-22'
 modified: '2026-08-22'
 tags:
 - Company
-apis: []
+- Security
+- Mobile
+- Virtualization
+- Zero Trust
+- BYOD
+- Government
+- Defense
+- Compliance
+- Identity
+- SaaS
+apis:
+- name: Hypori Management API
+  description: >-
+    REST API for administering a Hypori deployment — managing user accounts, virtual device
+    lifecycles, client and virtual-device policy assignments, and virtual-device template
+    assignments. Requests are authenticated with an administrator .p12 client certificate,
+    which is exchanged at POST /api/v2/authenticate/adminuilogin for a token supplied in the
+    X-AUTH-TOKEN header on every subsequent call. The API is served from the management
+    server of each customer's own cluster; Hypori publishes no OpenAPI definition and no
+    public endpoint reference.
+  humanURL: https://docs.hypori.com/Configure/managementAPI
+  baseURL: https://{management-server-hostname}/api
+  tags:
+  - Management
+  - Provisioning
+  - Policy
+  - Identity
+  - Security
+  properties:
+  - type: Documentation
+    url: https://docs.hypori.com/Configure/managementAPI
+  - type: Authentication
+    url: authentication/hypori-authentication.yml
+  - type: Conventions
+    url: conventions/hypori-conventions.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/hypori-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://www.hypori.com/
+- type: Documentation
+  url: https://docs.hypori.com/
+- type: APIReference
+  url: https://docs.hypori.com/Configure/managementAPI
+- type: GettingStarted
+  url: https://docs.hypori.com/Configure/quickstart
+- type: Support
+  url: https://www.hypori.com/support
+- type: Blog
+  url: https://www.hypori.com/resources/blog
+- type: Pricing
+  url: https://www.hypori.com/pricing
+- type: TermsOfService
+  url: https://www.hypori.com/legal/terms-of-service
+- type: PrivacyPolicy
+  url: https://www.hypori.com/legal/privacy-policy
+- type: TrustCenter
+  url: https://app.vanta.com/hypori.com/trust/gmcybh48syrmfwdhr8dd52
+- type: Compliance
+  url: conformance/hypori-conformance.yml
+- type: Conformance
+  url: conformance/hypori-conformance.yml
+- type: ChangeLog
+  url: changelog/hypori-changelog.yml
+- type: Lifecycle
+  url: lifecycle/hypori-lifecycle.yml
+- type: Authentication
+  url: authentication/hypori-authentication.yml
+- type: Conventions
+  url: conventions/hypori-conventions.yml
+- type: LLMsTxt
+  url: llms/hypori-llms.txt
+- type: Packages
+  url: packages/hypori-packages.yml
+- type: Plans
+  url: plans/hypori-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/hypori-rate-limits.yml
+x-enrichment:
+  date: '2026-08-22'
+  status: enriched
+  artifacts_added: 13
+  pass: local-v1
+x-coverage:
+  state: covered
+  reason: no-machine-readable-spec
+  detail: >-
+    Hypori documents its Management API in prose only at
+    docs.hypori.com/Configure/managementAPI — REST, client-certificate plus X-AUTH-TOKEN auth,
+    two named endpoint paths — and publishes no OpenAPI: /openapi.json, /openapi.yaml,
+    /swagger.json and /api-docs all 404 on hypori.com, www.hypori.com and docs.hypori.com, and
+    the API itself runs on each customer's own management cluster host, which is not publicly
+    resolvable.
+  evidence:
+    - url: https://docs.hypori.com/Configure/managementAPI
+      status: 200
+    - url: https://docs.hypori.com/openapi.json
+      status: 404
+    - url: https://www.hypori.com/openapi.json
+      status: 404
+    - url: https://www.hypori.com/llms.txt
+      status: 200
+    - url: https://www.hypori.com/.well-known/agent-card.json
+      status: 404
+  checked: '2026-08-22'

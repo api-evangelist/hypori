@@ -1,0 +1,67 @@
+generated: '2026-08-22'
+method: searched
+source: https://docs.hypori.com/Configure/managementAPI
+docs: https://docs.hypori.com/Configure/managementAPI
+api: Hypori Management API
+note: >-
+  Derived from Hypori's own published Management API page, not from a specification —
+  Hypori publishes no OpenAPI, so there are no securitySchemes to read. Everything below is
+  stated verbatim in the documentation. The Hypori client app (end-user side) and the admin
+  console use a separate, related certificate model documented at
+  https://docs.hypori.com/Plan/integration.
+summary: >-
+  Two-step administrator authentication: mutual TLS with a .p12 client certificate issued by
+  the customer's Hypori Site Administrator, exchanged once for a bearer-style token that is
+  then carried in a proprietary X-AUTH-TOKEN header on every subsequent request.
+schemes:
+- id: admin_client_certificate
+  type: mutualTLS
+  transport: https
+  description: >-
+    An administrator-role account is issued a ".p12" client certificate file and passphrase by
+    the customer's Hypori Site Administrator. The certificate is presented on the TLS handshake
+    (curl --cert mycert.p12:passphrase). Clients that require PEM can convert with
+    "openssl pkcs12 -in mycert.p12 -out mycert.pem -nodes".
+  issued_by: customer Hypori Site Administrator
+  self_service: false
+  documented: true
+- id: x_auth_token
+  type: apiKey
+  in: header
+  name: X-AUTH-TOKEN
+  description: >-
+    Session token returned in the JSON body ("token" field) of a bodyless POST to
+    /api/v2/authenticate/adminuilogin made with the client certificate. Included in the
+    X-AUTH-TOKEN HTTP header on all subsequent Management API requests.
+  documented: true
+token_endpoint:
+  method: POST
+  path: /api/v2/authenticate/adminuilogin
+  request_body: none
+  response_field: token
+  documented_example: |
+    curl --cert mycert.p12:passphrase --request POST \
+      'https://mgmt.example.com:443/api/v2/authenticate/adminuilogin'
+oauth2: false
+openid_connect: false
+api_keys: false
+scopes:
+  model: role-based
+  note: >-
+    Access is granted to accounts holding the Administrator role; Hypori documents no OAuth
+    scopes and no scope/permission reference page, so no scopes/ artifact is emitted.
+token_lifetime: not documented
+refresh: not documented
+rotation: not documented
+mfa:
+  admin_console: >-
+    Administrators authenticate to the Hypori Admin Console with the same p12 certificate
+    uploaded to the browser, or with a Common Access Card (CAC) and reader.
+  end_user_client: >-
+    The Hypori client app uses certificate-based (mTLS) authentication with a certificate
+    minted on first connect; TOTP and biometric secondary authentication are configurable.
+  source: https://docs.hypori.com/Plan/integration
+gaps:
+- No OpenAPI securitySchemes published, so the auth model cannot be machine-verified.
+- Token lifetime, refresh and revocation semantics are not documented.
+- No self-service credential issuance; certificates come from the Site Administrator.

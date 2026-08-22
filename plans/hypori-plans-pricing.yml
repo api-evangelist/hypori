@@ -1,0 +1,37 @@
+generated: '2026-08-22'
+method: searched
+source: https://www.hypori.com/pricing
+docs: https://www.hypori.com/pricing
+probe:
+  url: https://www.hypori.com/pricing
+  status: 200
+  observed: '2026-08-22'
+plan_count: 0
+currency: null
+billing_model: quote-based
+note: >-
+  Hypori publishes no priced plans. The pricing page is headed "Custom pricing that scales with
+  you" and states that "every organization's security needs are unique, and our pricing reflects
+  that". It names three organization sizes it serves — small teams, mid-sized enterprises and
+  large organizations — but attaches no price, currency, billing period, seat minimum or
+  included quota to any of them. The only calls to action are a request-a-quote form, contact
+  sales, and request a demo. Public-sector buyers transact through resellers and marketplaces
+  (Carahsoft, AWS Marketplace / AWS GovCloud) where pricing is likewise quote- or
+  contract-based. Recorded as plan_count: 0 rather than omitted: this is a real, measured
+  absence of published pricing, not a gap in the probe.
+plans: []
+segments_named:
+- small teams
+- mid-sized enterprises
+- large organizations
+acquisition_paths:
+- type: quote
+  url: https://www.hypori.com/pricing
+- type: contact-sales
+  url: https://www.hypori.com/contact
+- type: demo
+  url: https://www.hypori.com/request-a-demo
+- type: reseller
+  url: https://www.carahsoft.com/hypori
+- type: marketplace
+  url: https://aws.amazon.com/marketplace/pp/prodview-jzmb6jxix7cfu

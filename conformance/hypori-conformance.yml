@@ -1,0 +1,151 @@
+generated: '2026-08-22'
+method: searched
+source: https://www.hypori.com/llms.txt
+docs:
+- https://www.hypori.com/llms.txt
+- https://docs.hypori.com/Discover/trust
+- https://app.vanta.com/hypori.com/trust/gmcybh48syrmfwdhr8dd52
+note: >-
+  Hypori publishes no OpenAPI, so nothing here is derived from a contract. The API/technical
+  conformance rows below are read from Hypori's own Management API documentation; the
+  regulatory and certification rows are read from Hypori's own compliance statements and, where
+  a third-party register carries the evidence, from that register's own document. Rows that
+  Hypori claims but that could not be independently confirmed at a public register are marked
+  conforms: true with evidence citing the provider claim, and self_attested: true.
+
+api_conformance:
+- id: rest
+  conforms: true
+  evidence: >-
+    "The Hypori Management API is organized around REST ... has predictable resource-oriented
+    URLs, accepts JSON-encoded request bodies, returns JSON-encoded responses, and uses
+    standard HTTP response codes and verbs."
+  source: https://docs.hypori.com/Configure/managementAPI
+- id: openapi
+  conforms: false
+  evidence: >-
+    No OpenAPI or Swagger document is served. /openapi.json, /openapi.yaml, /swagger.json and
+    /api-docs all returned 404 on hypori.com, www.hypori.com and docs.hypori.com (2026-08-22).
+- id: oauth2
+  conforms: false
+  evidence: Authentication is mTLS client certificate plus an X-AUTH-TOKEN header; no OAuth 2.0 flows are documented.
+- id: oidc
+  conforms: false
+  evidence: >-
+    No /.well-known/openid-configuration on any Hypori host (404). Okta is documented as an
+    end-user identity option in the Enrollment Portal (2026.1.1 / 2026.2.0 release notes), but
+    Hypori publishes no OIDC discovery document of its own.
+- id: mutual-tls
+  conforms: true
+  evidence: >-
+    Administrator API calls and Hypori client connections both use certificate-based (mTLS)
+    authentication; the API example is "curl --cert mycert.p12:passphrase".
+  source: https://docs.hypori.com/Configure/managementAPI
+- id: rfc9457
+  conforms: false
+  evidence: No problem+json or error catalog is published; docs state only "standard HTTP response codes".
+- id: pagination
+  conforms: false
+  evidence: No pagination convention is documented.
+- id: idempotency
+  conforms: false
+  evidence: No idempotency key or retry semantics are documented.
+- id: scim
+  conforms: false
+  evidence: >-
+    User provisioning is documented against customer LDAP (external or Hypori-hosted internal),
+    with APIs to automate provisioning — no SCIM schema URN, /scim/v2 surface or SCIM claim
+    appears anywhere in the documentation.
+  source: https://docs.hypori.com/Plan/integration
+- id: ldap
+  conforms: true
+  evidence: >-
+    "Hypori recommends integrating with an existing customer-managed LDAP server ... Hypori
+    fetches the user's name, email address, and LDAP Distinguished Name (DN) from the LDAP
+    server." Hypori also offers an internal LDAP server plus web-form and CSV bulk add.
+  source: https://docs.hypori.com/Plan/integration
+
+domain_standard:
+  applicable: true
+  market: US federal / defense mobility and regulated-industry BYOD
+  declared_in_contract: false
+  note: >-
+    Hypori's market standards are authorization and assessment regimes (FedRAMP, DoD/DoW IL5,
+    CMMC, NIAP Protection Profiles, NSA CSfC), not message or schema standards, and none of
+    them is declared inside a machine-readable contract because Hypori publishes none. The
+    regime conformance is real and third-party-validated; it simply is not expressed in the
+    API surface. Recorded honestly as declared_in_contract: false rather than credited.
+
+compliance:
+  program_published: true
+  trust_center: https://app.vanta.com/hypori.com/trust/gmcybh48syrmfwdhr8dd52
+  certifications:
+  - id: fedramp-high
+    name: FedRAMP High authorization
+    status: authorized
+    self_attested: true
+    evidence: >-
+      Claimed on Hypori's own compliance summary and announced at
+      https://www.hypori.com/news-and-media/hypori-achieves-fedramp-high-authorization
+    source: https://www.hypori.com/llms.txt
+  - id: dod-il5
+    name: DoD / DoW Impact Level 5 (IL5) Provisional Authorization
+    status: authorized
+    self_attested: true
+    evidence: >-
+      Claimed on Hypori's own compliance summary; DISA IL5 PA extension through 2028 announced at
+      https://www.hypori.com/news-and-media/hypori-secures-disa-il5-provisional-authorization-extension-through-2028
+    source: https://www.hypori.com/llms.txt
+  - id: soc2-type2
+    name: SOC 2 Type II
+    status: attested
+    self_attested: true
+    evidence: >-
+      Claimed on Hypori's own compliance summary; announced at
+      https://www.hypori.com/news-and-media/soc-2-type-2-compliance-2026
+    source: https://www.hypori.com/llms.txt
+  - id: niap-common-criteria
+    name: NIAP Common Criteria validation (Hypori Halo Client for Android)
+    status: validated
+    self_attested: false
+    evidence: >-
+      "Hypori Halo Client (Android) 4.3 Security Target, Version 1.0, February 15, 2024",
+      prepared for Hypori, Inc. by Leidos Inc. Common Criteria Testing Laboratory, published on
+      the NIAP CCEVS public file service (HTTP 200, application/pdf, fetched 2026-08-22).
+    source: https://www.niap-ccevs.org/api/file/get_public_file/?file_id=28986
+  - id: nsa-csfc
+    name: NSA Commercial Solutions for Classified (CSfC) component listing
+    status: listed
+    self_attested: true
+    evidence: Claimed on Hypori's own compliance summary and government solution pages.
+    source: https://www.hypori.com/llms.txt
+  - id: fips-140-2
+    name: FIPS 140-2 validated cryptographic module (Hypori Cryptographic Module for BoringSSL)
+    status: validated
+    self_attested: false
+    evidence: >-
+      "Hypori Inc. Hypori Cryptographic Module for BoringSSL — FIPS 140-2 Non-Proprietary
+      Security Policy", software version 66005f41fbc3529ffe8d007708756720529da20d, dated
+      February 15, 2022, prepared by Accredited Testing & Evaluation Labs, published in the NIST
+      CMVP security-policy library (HTTP 200, application/pdf, fetched 2026-08-22).
+    source: https://csrc.nist.gov/CSRC/media/projects/cryptographic-module-validation-program/documents/security-policies/140sp3620.pdf
+  frameworks_addressed:
+  - id: cmmc-2.0-level-2
+    role: scope-reduction
+    evidence: >-
+      Hypori positions the product as keeping mobile endpoints out of CMMC Level 2 assessment
+      scope because CUI and FCI never reach the device.
+    source: https://www.hypori.com/solutions/cmmc
+  - id: dfars-252.204-7012
+    role: scope-reduction
+    source: https://www.hypori.com/llms.txt
+  - id: nist-800-171
+    role: scope-reduction
+    source: https://www.hypori.com/llms.txt
+  - id: hipaa
+    role: enablement
+    evidence: HIPAA-compliant BYOD for ePHI access is a named solution.
+    source: https://www.hypori.com/hipaa-compliant-byod-healthcare
+  - id: no-tiktok-on-government-devices-act
+    role: enablement
+    source: https://www.hypori.com/use-cases/comply-with-no-tiktok-on-government-devices-act

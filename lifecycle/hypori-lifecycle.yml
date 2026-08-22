@@ -1,0 +1,82 @@
+generated: '2026-08-22'
+method: searched
+source: https://docs.hypori.com/releasenotes
+docs:
+- https://docs.hypori.com/releasenotes
+- https://docs.hypori.com/Configure/managementAPI
+- https://www.hypori.com/support
+api: Hypori Management API
+versioning:
+  api:
+    style: uri-path
+    versions_observed:
+    - v1
+    - v2
+    evidence: >-
+      Documented example calls use POST /api/v2/authenticate/adminuilogin and
+      POST /api/v1/cloudconfigs; both versions are in use simultaneously.
+    source: https://docs.hypori.com/Configure/managementAPI
+    policy_published: false
+  platform:
+    style: calendar-major-minor
+    current: '2026.2.1'
+    policy_published: true
+    major: approximately quarterly, numbered year.sequence (e.g. 2024.3)
+    minor: monthly between majors, numbered year.sequence.increment (e.g. 2024.3.1), for security updates and key bug fixes
+    feature_policy: new features are reserved for major releases
+    source: https://docs.hypori.com/releasenotes
+support_policy:
+  published: true
+  statement: >-
+    "Minor releases are typically supported for the current and one previous major version
+    (e.g. 2024.3 and 2024.2)."
+  scope: platform release, not API version
+  source: https://docs.hypori.com/releasenotes
+deprecation:
+  policy_published: false
+  sunset_header: not documented
+  deprecation_header: not documented
+  rfc8594: false
+  deprecated_operations: []
+  note: >-
+    No API deprecation policy, no Sunset/Deprecation response headers and no notice period for
+    retiring /api/v1 are published. The platform support window above is an end-of-support
+    statement for builds, not a deprecation policy for the API, so no Deprecation pointer is
+    emitted in apis.yml.
+status_page:
+  published: false
+  url: https://status.hypori.com/
+  probe:
+    status: 200
+    observed: '2026-08-22'
+    body: >-
+      Atlassian Statuspage responding with "Hypori Status Page Status - Page Inactive.
+      Houston, we have a problem. This page is currently inactive and can only be viewed by
+      team members. To see this page, sign in or request an account."
+  note: >-
+    status.hypori.com resolves and returns HTTP 200, but the page is deactivated and readable
+    only by Hypori team members, so there is no public status surface. Recorded as a probed
+    200-that-is-not-a-document; no StatusPage pointer is emitted in apis.yml.
+sla:
+  published: false
+  note: >-
+    No public SLA. Support tiers are sold as packages
+    (https://www.hypori.com/resource-hub/hypori-support-packages) and Tier 2+ ticketing is
+    handled through the Hypori website; terms live in the Master Subscription Agreement
+    (https://www.hypori.com/legal/master-subscription-agreement).
+support:
+  channel: https://www.hypori.com/support
+  model: >-
+    Customer IT support handles common operations through the Hypori User Administration
+    portal (add/delete individual users, bulk group add/delete, re-issue a user QR code, user
+    diagnostics, alert monitoring); platform or application issues escalate to Hypori Tier 2+
+    trouble ticketing.
+  source: https://docs.hypori.com/Configure/quickstart
+client_releases:
+  ios: https://apps.apple.com/us/app/hypori/id6504121600
+  android: https://play.google.com/store/apps/details?id=com.intelligentwaves.client
+  note: Client release notes are published in the app stores' What's New sections, not in the platform release notes.
+gaps:
+- No API version deprecation policy or sunset notice period.
+- Public status page exists as a host but is deactivated.
+- No published SLA or uptime commitment.

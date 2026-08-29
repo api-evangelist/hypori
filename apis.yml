@@ -14,6 +14,17 @@ description: >-
   user, device-lifecycle and policy automation, documented in prose at docs.hypori.com; the
   API is authenticated with administrator client certificates plus an X-AUTH-TOKEN header and
   is served from each customer's own management cluster host.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://cdn.prod.website-files.com/670e85dd28def467590a59aa/672a83392147c46b65f05782_Open%20graph%20preview.png
 url: https://raw.githubusercontent.com/api-evangelist/hypori/refs/heads/main/apis.yml
 x-type: company

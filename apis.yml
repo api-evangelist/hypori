@@ -43,6 +43,18 @@ tags:
 - Defense
 - Compliance
 - Identity
+- Software-as-a-Service
+tags_raw:
+- Company
+- Security
+- Mobile
+- Virtualization
+- Zero Trust
+- BYOD
+- Government
+- Defense
+- Compliance
+- Identity
 - SaaS
 apis:
 - name: Hypori Management API

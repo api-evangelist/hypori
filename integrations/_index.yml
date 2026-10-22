@@ -19,8 +19,8 @@
     spec_file: null
     role: cc-certified-manufacturer
     registered_name: Hypori, Inc.
-    matched_domain: null
-    matched_by: register-name
+    matched_domain: hypori.com
+    matched_by: domain
     certified_products:
     - product: Other Devices and Systems
       product_type: Other Devices and Systems
@@ -35,10 +35,8 @@
       product counts are context, never counted'
     detected_by: sweep-common-criteria-certified-products.py
     detected: '2026-10-21'
-    register_name_note: register-name 'hypori' = hypori; wikidata P856 hypori.com agrees or unheld
-    identity_source: register-name
-    identity_note: register gave only the name; exact normalised match to the repo's apis.yml name, one repo, Wikidata
-      P856 not contradicting (Kin 2026-10-20 decision 2)
+    identity: wikidata Q141105491 'Hypori' P856 https://www.hypori.com/
+    identity_source: wikidata P856 (labelled provenance step; Kin 2026-10-15 decision 1)
   status: not-a-workflow
   arazzo: null
 - slug: hypori-niap-product-compliant-list-us-ccevs
@@ -57,8 +55,8 @@
     spec_file: null
     role: niap-pcl-vendor
     registered_name: Hypori, Inc.
-    matched_domain: null
-    matched_by: register-name
+    matched_domain: hypori.com
+    matched_by: domain
     signal_note: 'certified_products = one entry per NIAP technology type with a Certified (current) or Archived
       (lapsed: true) PCL product, Protection Profiles named; products In Progress are listing only (in_evaluation),
       never certified; product counts are context, never counted'
@@ -72,9 +70,7 @@
         Security Evaluation (CCRA)
       protection_profiles:
       - PP_APP_v1.4
-    register_name_note: register-name 'hypori' = hypori; wikidata P856 hypori.com agrees or unheld
-    identity_source: register-name
-    identity_note: register gave only the name; exact normalised match to the repo's apis.yml name, one repo, Wikidata
-      P856 not contradicting (Kin 2026-10-20 decision 2)
+    identity: wikidata Q141105491 'Hypori' P856 https://www.hypori.com/
+    identity_source: wikidata P856 (labelled provenance step; Kin 2026-10-15 decision 1)
   status: not-a-workflow
   arazzo: null

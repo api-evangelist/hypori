@@ -64,36 +64,107 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Hypori, Inc. is a Reston, Virginia headquartered, service-disabled veteran-owned software company
-building Virtual Mobile Infrastructure (VMI) for zero-trust mobile access. Hypori Mobile, Hypori
-Lyte and Hypori Secure Messaging run a fully isolated virtual Android workspace in Hypori's cloud
-and stream only encrypted pixels to the user's phone or tablet, so no organizational data is
-processed, transmitted or stored on the endpoint. Hypori holds FedRAMP High authorization, a
-DoD/DoW Impact Level 5 provisional authorization, SOC 2 Type II, NIAP Common Criteria validation
-and an NSA CSfC listing, and runs the U.S. Army BYOD and Department of the Air Force Workspace
-Anywhere programs.
+Hypori, Inc. is a Reston, Virginia headquartered, service-disabled veteran-owned software company that builds Virtual Mobile Infrastructure (VMI) for zero-trust mobile access. Its products — Hypori Mobile, Hypori Lyte and Hypori Secure Messaging — run a fully isolated virtual Android workspace in Hypori's cloud and stream only encrypted pixels to the user's phone or tablet, so no organizational data is ever processed, transmitted or stored on the endpoint. That architecture keeps CUI, FCI, PII and PHI off personal devices and takes the mobile endpoint out of CMMC 2.0 Level 2 assessment scope. Hypori holds FedRAMP High authorization, a DoD/DoW Impact Level 5 provisional authorization, SOC 2 Type II, NIAP Common Criteria validation and NSA CSfC listing, and runs the U.S. Army BYOD and Department of the Air Force Workspace Anywhere programs. Hypori publishes a REST Management API for user, device-lifecycle and policy automation, documented in prose at docs.hypori.com; the API is authenticated with administrator client certificates plus an X-AUTH-TOKEN header and is served from each customer's own management cluster host.
 
-## API surface
+**Areas:** Company · Security · Mobile · Virtualization · Zero Trust · BYOD · Government · Defense · Compliance · Identity · Software-as-a-Service
 
-Hypori documents a REST **Management API** for user accounts, virtual device lifecycles, and
-client / virtual-device policy and template assignments. It is authenticated with an
-administrator `.p12` client certificate exchanged at `POST /api/v2/authenticate/adminuilogin`
-for a token carried in an `X-AUTH-TOKEN` header, and is served from each customer's own
-management cluster host rather than a shared public endpoint.
+## Hypori on APIs.io
 
-**Hypori publishes no machine-readable contract.** `/openapi.json`, `/openapi.yaml`,
-`/swagger.json` and `/api-docs` all return 404 on `hypori.com`, `www.hypori.com` and
-`docs.hypori.com`; there is no GraphQL, MCP, A2A agent card, AsyncAPI, gRPC or WSDL surface, and
-no `/.well-known/` document on any host. The public API documentation names exactly two endpoint
-paths.
+Everything profiled for Hypori is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/hypori/](https://apis.io/providers/hypori/)** — or go straight to one of the APIs or properties below.
 
-## Links
+### APIs (1)
 
-- Website — https://www.hypori.com/
-- Documentation — https://docs.hypori.com/
-- Management API — https://docs.hypori.com/Configure/managementAPI
-- Quick Start — https://docs.hypori.com/Configure/quickstart
-- Release notes — https://docs.hypori.com/releasenotes
-- Trust Center — https://app.vanta.com/hypori.com/trust/gmcybh48syrmfwdhr8dd52
-- Pricing — https://www.hypori.com/pricing
-- Support — https://www.hypori.com/support
+- [Hypori Management API](https://apis.io/apis/hypori/hypori-management-api/) — REST API for administering a Hypori deployment — managing user accounts, virtual device lifecycles, client and virtual-device policy assignments, and…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (4)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Hypori Authentication](https://apis.io/security/hypori/hypori-authentication/)
+- [Hypori Domain Security](https://apis.io/security/hypori/hypori-domain-security/)
+- [Hypori Trust Center](https://apis.io/security/hypori/hypori-trust-center/)
+- [Hypori Vulnerability Disclosure](https://apis.io/security/hypori/hypori-vulnerability-disclosure/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Hypori Plans Pricing](https://apis.io/plans/hypori/hypori-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Hypori Rate Limits](https://apis.io/rate-limits/hypori/hypori-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.hypori.com/)
+- [Documentation](https://docs.hypori.com/)
+- [Getting started](https://docs.hypori.com/Configure/quickstart)
+- [API reference](https://docs.hypori.com/Configure/managementAPI)
+- [Pricing](https://www.hypori.com/pricing)
+- [Support](https://www.hypori.com/support)
+- [Blog](https://www.hypori.com/resources/blog)
+- [Trust centre](https://app.vanta.com/hypori.com/trust/gmcybh48syrmfwdhr8dd52)
+- [Terms of service](https://www.hypori.com/legal/terms-of-service)
+- [Privacy policy](https://www.hypori.com/legal/privacy-policy)
+
+## API Evangelist rating
+
+**Kin Score 28.5** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 15.8 |
+| Developer ergonomics | 47.6 |
+| Access clarity | 39.5 |
+
+**Agent readiness 5.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 24.5** — Government & Public Sector
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/hypori/](https://apis.io/providers/hypori/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Hypori: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/hypori/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
